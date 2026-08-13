@@ -78,13 +78,6 @@ We strongly believe in open-source and welcome contributions from the community!
 
 Please review our [CONTRIBUTING.md](CONTRIBUTING.md) for detailed guidelines.
 
-### GrantFox Platform
-
-This repository participates in **GrantFox** for open-source collaboration. Contributors can:
-- Browse and claim issues via the [GrantFox Contributor App](https://contribute.grantfox.xyz/)
-- Track PR reviews and campaign participation.
-
-Maintainers manage campaigns and review contributions via the [GrantFox Maintainer App](https://maintainer.grantfox.xyz/).
 
 ## 🛡️ Security
 

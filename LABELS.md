@@ -1,6 +1,6 @@
 # Issue Labels
 
-This document describes the labels used in this repository for GrantFox contribution workflows.
+This document describes the labels used in this repository for contribution workflows.
 
 ## Contribution Type Labels
 
@@ -37,11 +37,6 @@ This document describes the labels used in this repository for GrantFox contribu
 - **status: ready for review**: PR is ready for maintainer review.
 - **status: needs info**: More information is needed to proceed.
 
-## GrantFox Campaign Labels
-
-Maintainers use these labels to identify campaign-ready tasks:
-
-- **campaign-ready**: Issue is ready for GrantFox campaign with clear acceptance criteria, estimated difficulty, and testing requirements.
 
 ## Label Usage Guidelines
 

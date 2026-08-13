@@ -2,17 +2,16 @@
 
 Thank you for your interest in contributing to WhiteLotus Contracts! This document guides you through the contribution process.
 
-## GrantFox Contribution Workflow
+## Contribution Workflow
 
-This repository participates in GrantFox for open-source collaboration. Here's how to contribute:
+Here's how to contribute:
 
-1. **Browse Issues**: Visit the [GrantFox Contributor App](https://contribute.grantfox.xyz/) to find available issues tagged for this repository.
-2. **Claim an Issue**: Apply for an issue through GrantFox. Wait for maintainer approval before starting work.
-3. **Fork and Branch**: Fork the repository and create a feature branch from `main`.
-4. **Develop**: Make your changes following the guidelines below.
-5. **Test**: Run tests and ensure your changes pass all checks.
-6. **Submit PR**: Create a pull request with the GrantFox issue link in the description.
-7. **Review**: Maintainers will review your PR via GrantFox. Address feedback promptly.
+1. **Browse Issues**: Find available issues tagged for this repository.
+2. **Fork and Branch**: Fork the repository and create a feature branch from `main`.
+3. **Develop**: Make your changes following the guidelines below.
+4. **Test**: Run tests and ensure your changes pass all checks.
+5. **Submit PR**: Create a pull request with a description of your changes.
+6. **Review**: Maintainers will review your PR. Address feedback promptly.
 
 ## Development Setup
 
@@ -84,7 +83,7 @@ forge fmt
 
 ## Pull Request Process
 
-1. **Link Issue**: Include the GrantFox issue number in your PR description.
+1. **Link Issue**: Include the relevant issue number in your PR description.
 2. **Summary**: Provide a clear summary of changes.
 3. **Test Evidence**: Describe how you tested the changes.
 4. **Checklist**: Ensure your PR meets the checklist in the PR template.
@@ -101,7 +100,7 @@ forge fmt
 
 ## Review Process
 
-- Maintainers review PRs through GrantFox workflow.
+- Maintainers review PRs.
 - Reviews focus on correctness, security, gas efficiency, and alignment with project goals.
 - Address all review comments before requesting re-review.
 - PRs may be rejected if they don't meet quality standards.
@@ -130,7 +129,7 @@ Maintainers mark issues as campaign-ready when they:
 - Define testing requirements
 - Note reviewer expectations
 
-Look for issues tagged with `good first issue` or `help wanted` on GrantFox.
+Look for issues tagged with `good first issue` or `help wanted`.
 
 ## License
 
