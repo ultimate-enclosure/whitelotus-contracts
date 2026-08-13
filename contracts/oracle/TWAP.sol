@@ -289,7 +289,12 @@ contract TWAP is Ownable {
         view
         returns (uint256 priceAverage)
     {
-        uint32 targetTimestamp = uint32(block.timestamp) - window;
+        uint32 targetTimestamp;
+        if (window > block.timestamp) {
+            targetTimestamp = 0;
+        } else {
+            targetTimestamp = uint32(block.timestamp) - window;
+        }
 
         // Find the observation at or just before targetTimestamp using binary search.
         (Observation memory oldestObs, bool found) = _binarySearch(pair, targetTimestamp);
@@ -298,14 +303,17 @@ contract TWAP is Ownable {
             // The oldest available observation (returned by _binarySearch) is newer than
             // targetTimestamp. Revert — silently falling back to a shorter window would
             // compromise manipulation resistance.
-            uint32 availableWindow = uint32(block.timestamp) - oldestObs.timestamp;
+            uint32 availableWindow = 0;
+            if (uint32(block.timestamp) > oldestObs.timestamp) {
+                availableWindow = uint32(block.timestamp) - oldestObs.timestamp;
+            }
             revert InsufficientWindow(pairId, availableWindow, window);
         }
 
         // Use the continuously-tracked cumulative price as the "newest" value.
         // This includes all price data accumulated since the last observation,
         // matching Uniswap V2 behavior.
-        uint32 timeDelta = uint32(block.timestamp) - oldestObs.timestamp;
+        uint32 timeDelta = pair.lastUpdateTime - oldestObs.timestamp;
         if (timeDelta == 0) revert InsufficientObservations(pairId, 0, 1);
 
         uint256 cumulativeDelta = pair.priceCumulativeLast - oldestObs.priceCumulative;

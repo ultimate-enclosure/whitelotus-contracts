@@ -12,8 +12,8 @@ contract DiamondCutFacet is IDiamondCut {
         external
         override
     {
-        if (tx.origin == msg.sender) revert EOAUpgradeNotAllowed();
         LibDiamond.enforceIsContractOwner();
+        if (tx.origin == msg.sender) revert EOAUpgradeNotAllowed();
         LibDiamond.diamondCut(_diamondCut, _init, _calldata);
     }
 }

@@ -27,8 +27,9 @@ contract StakingLogic is BaseLogic, ReentrancyGuardUpgradeable {
         __Ownable_init();
         __ReentrancyGuard_init();
         if (initialOwner == address(0)) revert ZeroAddress();
-        if (initialOwner == msg.sender) revert AlreadyInitialOwner();
-        _transferOwnership(initialOwner);
+        if (initialOwner != msg.sender) {
+            _transferOwnership(initialOwner);
+        }
     }
 
     /// @dev nonReentrant: no external call exists on this path today, but stake/unstake

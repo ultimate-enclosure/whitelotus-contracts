@@ -139,7 +139,7 @@ contract GovernanceTimelockTest is Test {
 
     function testUpdateAdminRevertsNonAdmin() public {
         vm.prank(stranger);
-        vm.expectRevert("Not admin");
+        vm.expectRevert(Governance.NotAdmin.selector);
         gov.updateAdmin(address(0xDA));
     }
 
@@ -220,7 +220,7 @@ contract GovernanceTimelockTest is Test {
 
         // A stranger calling createProposal directly must revert.
         vm.prank(stranger);
-        vm.expectRevert("Not admin");
+        vm.expectRevert(Governance.NotAdmin.selector);
         gov.createProposal("Evil Proposal", 1 days, 1 days);
     }
 
@@ -233,7 +233,7 @@ contract GovernanceTimelockTest is Test {
 
         // The original admin is no longer the Governance admin; direct call reverts.
         vm.prank(admin);
-        vm.expectRevert("Not admin");
+        vm.expectRevert(Governance.NotAdmin.selector);
         gov.createProposal("Bypass Attempt", 1 days, 1 days);
     }
 

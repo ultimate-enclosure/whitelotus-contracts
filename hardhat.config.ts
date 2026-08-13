@@ -1,8 +1,8 @@
 import { defineConfig } from "hardhat/config";
-import hhEthers from "@nomicfoundation/hardhat-ethers";
-import hhMocha from "@nomicfoundation/hardhat-mocha";
-import hhEthersChaiMatchers from "@nomicfoundation/hardhat-ethers-chai-matchers";
-import hhUpgrades from "@openzeppelin/hardhat-upgrades";
+import "@nomicfoundation/hardhat-ethers";
+import "@nomicfoundation/hardhat-mocha";
+import "@nomicfoundation/hardhat-ethers-chai-matchers";
+import "@openzeppelin/hardhat-upgrades";
 
 export default defineConfig({
   solidity: {
@@ -19,10 +19,4 @@ export default defineConfig({
     sources: "./contracts",
     tests: "./test"
   },
-  plugins: [
-    hhEthers,
-    hhMocha,
-    hhEthersChaiMatchers,
-    hhUpgrades
-  ]
 });

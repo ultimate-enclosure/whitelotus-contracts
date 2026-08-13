@@ -142,6 +142,10 @@ contract WhiteLotusERC4626 is
         }
     }
 
+    function _decimalsOffset() internal view virtual override returns (uint8) {
+        return 18;
+    }
+
     /// @notice Every registered strategy, in the order withdrawals draw from them.
     function strategies() external view returns (address[] memory) {
         return _strategies;
