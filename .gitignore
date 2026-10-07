@@ -8,7 +8,6 @@ lib/
 /test_snapshots
 
 # Environment
-.env
 
 # Local binaries
 /foundry-bin/
@@ -19,3 +18,4 @@ artifacts/
 cache/
 typechain/
 typechain-types/
+config.bat
